@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 553c36b21253f7d4fa1b45d0b7cb299b
+guid: 0f0b8cae8db3e6c40b1efe92e2fa652a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6893326603507580621
-    second: Small Circle_0
+      213: 7482667652216324306
+    second: Square_0
   - first:
-      213: -2467311802798988577
-    second: Small Circle_1
+      213: 7502894752496598917
+    second: Square_1
   - first:
-      213: -4889228310719182122
-    second: Small Circle_2
+      213: 8623377449436965134
+    second: Square_2
   - first:
-      213: -3555380709154224565
-    second: Small Circle_3
+      213: -6991059544506654955
+    second: Square_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,10 +73,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,10 +85,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,10 +97,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 1024
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,10 +109,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,85 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small Circle_0
+      name: Square_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 206
-        width: 165
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3314e2df9fbf550a0800000000000000
-      internalID: -6893326603507580621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Circle_1
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 206
-        width: 165
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd2a90cdcf852cdd0800000000000000
-      internalID: -2467311802798988577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Circle_2
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 165
-        height: 165
+        width: 18
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6daccc171c8f52cb0800000000000000
-      internalID: -4889228310719182122
+      spriteID: 2d009a6b596c7d760800000000000000
+      internalID: 7482667652216324306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Circle_3
+      name: Square_1
       rect:
         serializedVersion: 2
-        x: 203
+        x: 34
         y: 0
-        width: 165
-        height: 165
+        width: 19
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b46069d0510c8aec0800000000000000
-      internalID: -3555380709154224565
+      spriteID: 58fb3bd7603af1860800000000000000
+      internalID: 7502894752496598917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 19
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09edc50a146ca770800000000000000
+      internalID: 8623377449436965134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 19
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f931e6264cafe90800000000000000
+      internalID: -6991059544506654955
       vertices: []
       indices: 
       edges: []
@@ -218,7 +218,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
