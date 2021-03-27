@@ -7,6 +7,8 @@ namespace ColorSwitch.Generator
     {
         [SerializeField] private GameObject[] obstaclesType;
         [SerializeField] private GameObject colorSwitcher;
+        
+        [Range(1,5)] [Tooltip("Distance between obstacles and color switching object")] 
         [SerializeField] private float distanceToColorSwitcher = 1;
         [Tooltip("Average size of an obstacle")]
         [SerializeField] private float obstacleSize = 3.5f;

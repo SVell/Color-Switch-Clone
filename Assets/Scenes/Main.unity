@@ -249,6 +249,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclesType:
   - {fileID: 6484914568334924384, guid: 10c366ac8ea554b478daae7f015f83de, type: 3}
+  - {fileID: 5956974527120965552, guid: 8706952a15888544b8175721a911c381, type: 3}
+  colorSwitcher: {fileID: 3622625345595326993, guid: 3619c264794a63d4f9f098bf387d95ae,
+    type: 3}
+  distanceToColorSwitcher: 1
   obstacleSize: 3
   obstacleDistanceOffset: 2
 --- !u!4 &1765122844
@@ -282,6 +286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685160209868535393, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
+        type: 3}
+      propertyPath: jumpForce
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4685160209868535420, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
         type: 3}
@@ -353,6 +362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685160209868535423, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90, type: 3}

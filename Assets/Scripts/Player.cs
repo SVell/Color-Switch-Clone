@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ColorSwitch.Player
 {
@@ -44,7 +45,7 @@ namespace ColorSwitch.Player
          
          if (!other.CompareTag(_color.ToString()))
          {
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
          }
       }
 
