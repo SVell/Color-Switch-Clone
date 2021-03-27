@@ -6,6 +6,8 @@ namespace ColorSwitch.Generator
     public class LevelGenerator : MonoBehaviour
     {
         [SerializeField] private GameObject[] obstaclesType;
+        [SerializeField] private GameObject colorSwitcher;
+        [SerializeField] private float distanceToColorSwitcher = 1;
         [Tooltip("Average size of an obstacle")]
         [SerializeField] private float obstacleSize = 3.5f;
         [Range(0,5)] [Tooltip("Distance between obstacles")]
@@ -33,6 +35,7 @@ namespace ColorSwitch.Generator
         {
             _screenHeight = Screen.height / 100;
             _spawnPos = _screenHeight - obstacleSize;
+            distanceToColorSwitcher += obstacleSize / 2;
             SpawnObstacle(new Vector2(0, _spawnPos));
 
             _lastPosY = _camera.transform.position.y;
@@ -66,7 +69,8 @@ namespace ColorSwitch.Generator
 
         private void SpawnObstacle(Vector2 pos)
         {
-            _obstacles.Add(Instantiate(obstaclesType[0], pos, Quaternion.identity));
+            _obstacles.Add(Instantiate(obstaclesType[Random.Range(0,obstaclesType.Length)], pos, Quaternion.identity));
+            Instantiate(colorSwitcher, new Vector2(pos.x, pos.y + distanceToColorSwitcher), Quaternion.identity);
         }
 
         private void DeleteObstacles()
