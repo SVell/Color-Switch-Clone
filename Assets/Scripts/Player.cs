@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 namespace ColorSwitch.Player
 {
@@ -37,6 +35,13 @@ namespace ColorSwitch.Player
 
       private void OnTriggerEnter2D(Collider2D other)
       {
+         if (other.CompareTag("ColorChanger"))
+         {
+            Destroy(other.gameObject);
+            SetRandomColor();
+            return;
+         }
+         
          if (!other.CompareTag(_color.ToString()))
          {
             Debug.Log("Game Over!");
@@ -45,7 +50,12 @@ namespace ColorSwitch.Player
 
       void SetRandomColor()
       {
-         int index = Random.Range(0, 3);
+         int index = Random.Range(0, 4);
+
+         while (_color == (Colors.Color) index)
+         {
+            index = Random.Range(0, 4);
+         }
 
          _color = (Colors.Color) index;
 
