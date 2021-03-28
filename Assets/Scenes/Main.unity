@@ -121,6 +121,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &471290209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4685160209868535392, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
+    type: 3}
+  m_PrefabInstance: {fileID: 4685160210348893262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &471290210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471290209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10630cacdca11db40ab709b627fa5d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &471290211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471290209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c443f436b35ba6e45b10615d8db3298d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorCyan: {r: 0.20784315, g: 0.8862746, b: 0.9490197, a: 1}
+  colorYellow: {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
+  colorMagenta: {r: 0.54901963, g: 0.07450981, b: 0.9843138, a: 1}
+  colorPink: {r: 1, g: 0, b: 0.5019608, a: 1}
+  onDifferentColorEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 471290210}
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +276,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1765122844}
   - component: {fileID: 1765122843}
+  - component: {fileID: 1765122845}
   m_Layer: 0
-  m_Name: LevelGenerator
+  m_Name: ObstaclesSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,6 +318,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1765122845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765122842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96deec23deab9414a8f7693ba0455a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDistanceTraveled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1765122843}
+        m_MethodName: CheckForObjectSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  objectToCalculate: {fileID: 519420032}
+  distanceToTriggerAfter: 0
 --- !u!4 &2140911711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4685160209868535421, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
@@ -287,6 +364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4685160209868535392, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4685160209868535393, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
         type: 3}
       propertyPath: jumpForce
@@ -298,6 +380,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 44a4891fe350ad14990e8f5de06a6c51,
         type: 3}
+    - target: {fileID: 4685160209868535420, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4685160209868535421, guid: 6edfbd81d0cb4f7428c6acfd1dd35b90,
         type: 3}
       propertyPath: m_RootOrder
