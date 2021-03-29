@@ -4,8 +4,9 @@ using Random = UnityEngine.Random;
 
 namespace ColorSwitch.Player
 {
-   public class ColorChanger : MonoBehaviour
+   public class ColorManager : MonoBehaviour
    {
+      [SerializeField] private LayerMask whatIsColorCollision;
       [SerializeField] private Color colorCyan;
       [SerializeField] private Color colorYellow;
       [SerializeField] private Color colorMagenta;
@@ -35,7 +36,8 @@ namespace ColorSwitch.Player
             return;
          }
 
-         if (!other.CompareTag(_color.ToString()))
+         // Checks if object is in Color Collision layer
+         if (whatIsColorCollision == (whatIsColorCollision | (1 << other.gameObject.layer)) && !other.CompareTag(_color.ToString()))
          {
             onDifferentColorEnter?.Invoke();
          }
