@@ -11,6 +11,8 @@ namespace ColorSwitch.Generator
         [SerializeField] private GameObject[] obstaclesType;
         [SerializeField] private GameObject colorSwitcher;
         
+        [SerializeField] private int maximumObjectsPerScreen = 5;
+        
         [Range(1,5)] [Tooltip("Distance between obstacles and color switching object")] 
         [SerializeField] private float distanceToColorSwitcher = 1;
         
@@ -53,7 +55,7 @@ namespace ColorSwitch.Generator
 
         public void CheckForObjectSpawn()
         {
-            if (_obstacles.Count < 6)
+            if (_obstacles.Count < maximumObjectsPerScreen)
             {
                 _spawnPos += obstacleDistanceOffset + obstacleSize + Random.Range(1,obstacleDistanceOffset-1);
                 SpawnObstacle(new Vector2(0, _spawnPos));

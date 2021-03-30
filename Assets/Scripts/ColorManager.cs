@@ -11,6 +11,7 @@ namespace ColorSwitch.Player
       [SerializeField] private Color colorYellow;
       [SerializeField] private Color colorMagenta;
       [SerializeField] private Color colorPink;
+      [SerializeField] private AudioSource _colorChangeAudio;
 
       [SerializeField] private UnityEvent onDifferentColorEnter;
       
@@ -31,13 +32,15 @@ namespace ColorSwitch.Player
       {
          if (other.CompareTag("ColorChanger"))
          {
+            _colorChangeAudio.Play();
             Destroy(other.gameObject);
             SetRandomColor();
             return;
          }
 
          // Checks if object is in Color Collision layer
-         if (whatIsColorCollision == (whatIsColorCollision | (1 << other.gameObject.layer)) && !other.CompareTag(_color.ToString()))
+         if (whatIsColorCollision == (whatIsColorCollision | (1 << other.gameObject.layer)) && !other.CompareTag(_color.ToString()) 
+         || other.CompareTag("GameOver"))
          {
             onDifferentColorEnter?.Invoke();
          }

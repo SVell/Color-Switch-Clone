@@ -10,6 +10,7 @@ TagManager:
   - Magenta
   - ColorChanger
   - Star
+  - GameOver
   layers:
   - Default
   - TransparentFX

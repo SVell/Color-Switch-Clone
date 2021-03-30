@@ -15,6 +15,12 @@ namespace ColorSwitch.UI
          Time.timeScale = 1;
       }
 
+      public void RestartLevel()
+      {
+         Time.timeScale = 1;
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      }
+      
       public void LoadLevel(int index)
       {
          Time.timeScale = 1;
