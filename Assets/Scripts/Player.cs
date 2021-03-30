@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ColorSwitch.Player
 {
@@ -18,7 +19,13 @@ namespace ColorSwitch.Player
 
       private void Update()
       {
-         if (Input.GetButton("Jump") || Input.GetMouseButtonDown(0))
+         HandleInput();
+      }
+
+      public void HandleInput()
+      {
+         // Prevent jumping by pressing UI elements
+         if ((Input.GetButton("Jump") || Input.GetMouseButtonDown(0)) && !EventSystem.current.IsPointerOverGameObject())
          {
             if (_rb.gravityScale == 0)
             {
@@ -26,7 +33,7 @@ namespace ColorSwitch.Player
             }
             
             _rb.velocity = Vector2.up * jumpForce;
-         }
+         } 
       }
    }
 }

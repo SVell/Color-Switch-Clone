@@ -12,6 +12,7 @@
           <e p="ColorManager.cs" t="Include" />
           <e p="Colors.cs" t="Include" />
           <e p="GameOver.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
           <e p="ObjectSpawnManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Rotator.cs" t="Include" />
